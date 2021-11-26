@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled Document</title>
+  <meta name="Author" content="" />
+  <link rel="stylesheet" type="text/css" href="styl.css">
+</head>
+
+<body>
+  <!-- Javascript関数 -->
+  <script>
+    function dispimage(filename, comment) {
+      document.getElementById('image').src = filename;
+      document.getElementById('text').value = comment;
+    }
+  </script>
+
+  <!-- 画像 -->
+  <center>
+    <img src="http://k-hiura.cocolog-nifty.com/image_08_12/moai_7.gif" id="image" align="left">
+    <form id="form1"><input type="text" id="text" /></form>
+    <br style="clear: both;">
+
+    <!-- ボタンの並び -->
+    <input type="button" id="button1" value="画像1" onClick='dispimage("http://k-hiura.cocolog-nifty.com/image_08_12/moyai_2.gif",
+                    "画像1")' />
+     
+    <input type="button" id="button2" value="画像2" onClick='dispimage("http://k-hiura.cocolog-nifty.com/image_08_12/moyai_3.gif",
+                    "画像2")' />
+     
+    <input type="button" id="button3" value="画像3" onClick='dispimage("http://k-hiura.cocolog-nifty.com/image_08_12/moyai_6.gif",
+                    "画像3")' />
+  </center>
+
+
+</body></html>

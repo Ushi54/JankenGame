@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled Document</title>
+  <meta name="Author" content="" />
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <h1>じゃんけん(どちらが5回勝つまで)</h1>
+  <h2>相手</h2>
+  <div class="aite"><img id="image2" src="image/icon_116450_256.png" alt="チョキ"></div>
+
+  <h2>あなた</h2>
+  <div class="me"><img id="image1" src="image/icon_116450_256.png" alt="チョキ"></div>
+
+  <div id="syouhai">
+    選択肢から選んでね
+  </div>
+
+  <div class="sentaku">
+    <ol>
+      <li><button id="gu" onClick='dispimage1("image/icon_161030_256.png","0")'><img src="image/icon_161030_256.png" alt=グー></button><br>グー</li>
+
+      <li><button id="choki" onClick='dispimage1("image/icon_120310_256.png","1")'><img src="image/icon_120310_256.png" alt=チョキ></button><br>チョキ</li>
+
+      <li><button id="pa" onClick='dispimage1("image/icon_136500_256.png","2")'><img src="image/icon_136500_256.png" alt=パー></button><br>パー</li>
+    </ol>
+  </div>
+
+  <footer>
+    <small>Date Of Record:2019/12/25 by Hidaka</small>
+  </footer>
+
+  <script>
+    var aite_v = 0;
+    var me_v = 0;
+
+    function dispimage1(filename, num) {
+      //if (me_v > 4 || aite_v > 4) {
+      //  break;
+      //}
+      document.getElementById('image1').src = filename;
+      var random = Math.floor(Math.random() * 3);
+      var x;
+
+      if (random == 0) {
+        document.getElementById('image2').src = "image/icon_161030_256.png";
+        x = 0;
+      } else if (random == 1) {
+        document.getElementById('image2').src = "image/icon_120310_256.png";
+        x = 1;
+      } else {
+        document.getElementById('image2').src = "image/icon_136500_256.png";
+        x = 2;
+      }
+
+      if (num == x) {
+        document.getElementById("syouhai").innerHTML = "あいこ";
+      } else if (num == 0 && x == 1) {
+        document.getElementById("syouhai").innerHTML = "勝ち";
+        me_v++;
+      } else if (num == 0 && x == 2) {
+        document.getElementById("syouhai").innerHTML = "負け";
+        aite_v++;
+      } else if (num == 1 && x == 0) {
+        document.getElementById("syouhai").innerHTML = "負け";
+        aite_v++;
+      } else if (num == 1 && x == 2) {
+        document.getElementById("syouhai").innerHTML = "勝ち";
+        me_v++;
+      } else if (num == 2 && x == 0) {
+        document.getElementById("syouhai").innerHTML = "勝ち";
+        me_v++;
+      } else if (num == 2 && x == 1) {
+        document.getElementById("syouhai").innerHTML = "負け";
+        aite_v++;
+      }
+
+      if (me_v > 4) {
+        document.getElementById("syouhai").innerHTML = "あなたの勝利！！";
+      } else if (aite_v > 4) {
+        document.getElementById("syouhai").innerHTML = "相手の勝利・・・";
+      }
+    }
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+* {
+  text-align: center;
+}
+
+h1 {
+  border-bottom: solid;
+  padding-bottom: 10px;
+}
+
+h2 {}
+
+.aite,
+.me {
+  width: 250px;
+  height: 250px;
+  border: solid;
+  margin: 0 auto 20px;
+}
+
+.aite img,
+.me img {
+  padding: 0;
+  margin: 20px 0;
+  width: 200px;
+
+}
+
+.aite img {
+  transform: rotate(180deg);
+}
+
+ol {
+  list-style: none;
+}
+
+li {
+  float: left;
+  width: 160px;
+  height: 60px;
+  padding: 10px 0;
+  margin-bottom: 60px;
+}
+
+li img {
+  width: 50px;
+
+}
+
+.sentaku {
+  width: 550px;
+  height: 120px;
+  margin: 0 auto;
+  border: double;
+  background-color: aqua;
+  padding: 0 10px 0 0
+}
+
+#syouhai {
+  font-size: 30px;
+  border: solid;
+  width: 300px;
+  margin: 0 auto 10px;
+  background-color: coral
+}
+
+footer {
+  clear: both;
+}
